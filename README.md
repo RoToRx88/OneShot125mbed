@@ -23,7 +23,7 @@ my_motor.stdSetPercent(50); /*Set the rotation speed at 50% of the max speed*/
 
 ## Unidirectional / bidirectional motor
 
-In bidirectional mode, center throttle is zero and above is fwd rotation and below is reverse rotation unlike in unidirectional throttle is 0% at 0 throttle stick and 100% at full throttle stick.
+In bidirectional mode, center throttle is zero and above is fwd rotation and below is reverse rotation unlike in unidirectional mode, throttle is 0% at 0 throttle stick and 100% at full throttle stick.
 
 ### Unidirectional motor
 
@@ -38,7 +38,7 @@ my_motor.stdSetPercent(50); /*Set the rotation speed at 50% of the max speed*/
 __Work in process__
 
 ```
-OneShot125 my_motor(PA_7); /*Instantiate a new OneSHot motor on pin PA_7 (0x07)*/
+OneShot125 my_motor(PA_7); /*Instantiate a new OneShot motor on pin PA_7 (0x07)*/
 my_motor.dualSetPercent(50); /*Set the rotation speed at 0%*/
 my_motor.dualSetPercent(100); /*Set the rotation speed at 100% fwd*/
 my_motor.dualSetPercent(0); /*Set the rotation speed at 100% reverse*/
