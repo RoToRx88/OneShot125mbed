@@ -16,7 +16,7 @@ In the file `oneshot.h` I perform a `#include "mbed.h"`
 Just instance the class `OneShot125` with a pin in parameter and use the method `setPercent(flaot)` with in arg the percent of speed.
 
 ```
-OneShot125 my_motor(PA_7); /*Instantiate a new OneSHot motor on pin PA_7 (0x07)*/
+OneShot125 my_motor(PA_7, false); /*Instantiate a new OneSHot motor on pin PA_7 (0x07)*/
 my_motor.stdSetPercent(50); /*Set the rotation speed at 50% of the max speed*/
 
 ```
@@ -28,7 +28,7 @@ In bidirectional mode, center throttle is zero and above is fwd rotation and bel
 ### Unidirectional motor
 
 ```
-OneShot125 my_motor(PA_7); /*Instantiate a new OneSHot motor on pin PA_7 (0x07)*/
+OneShot125 my_motor(PA_7, false); /*Instantiate a new OneSHot motor on pin PA_7 (0x07)*/
 my_motor.stdSetPercent(50); /*Set the rotation speed at 50% of the max speed*/
 
 ```
@@ -38,7 +38,7 @@ my_motor.stdSetPercent(50); /*Set the rotation speed at 50% of the max speed*/
 __Work in process__
 
 ```
-OneShot125 my_motor(PA_7); /*Instantiate a new OneShot motor on pin PA_7 (0x07)*/
+OneShot125 my_motor(PA_7, true); /*Instantiate a new OneShot motor on pin PA_7 (0x07)*/
 my_motor.dualSetPercent(0, true); /*Set the rotation speed at 0%*/
 my_motor.dualSetPercent(100, true); /*Set the rotation speed at 100% fwd*/
 my_motor.dualSetPercent(100, false); /*Set the rotation speed at 100% reverse*/

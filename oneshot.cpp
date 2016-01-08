@@ -1,6 +1,6 @@
 #include "oneshot.h"
 
-OneShot125::OneShot125(PinName const _pin)
+OneShot125::OneShot125(PinName const _pin, bool const isDual)
 {
     this->min = 0.000125;
     this->middle = 0.0001875;
@@ -8,6 +8,10 @@ OneShot125::OneShot125(PinName const _pin)
     this->direction = false;
     this->motor = new PwmOut(_pin);
     this->motor->period_ms(1);
+    if (isDual) {
+        this->dualSetPercent(0, true);
+    } else
+        this->stdSetPercent(0);
 }
 
 void OneShot125::stdSetPercent(float const _percent)
@@ -35,6 +39,7 @@ float OneShot125::dualOneShotCalculatePercent(float const _percent, bool _direct
     else
         return (((_percent - 0) * (this->min - this->middle)) / (100 - 0)) + this->middle;
 }
+
 
 
 float OneShot125::getPercent()
