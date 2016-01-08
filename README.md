@@ -39,12 +39,8 @@ __Work in process__
 
 ```
 OneShot125 my_motor(PA_7); /*Instantiate a new OneShot motor on pin PA_7 (0x07)*/
-my_motor.dualSetPercent(50); /*Set the rotation speed at 0%*/
-my_motor.dualSetPercent(100); /*Set the rotation speed at 100% fwd*/
-my_motor.dualSetPercent(0); /*Set the rotation speed at 100% reverse*/
+my_motor.dualSetPercent(0, true); /*Set the rotation speed at 0%*/
+my_motor.dualSetPercent(100, true); /*Set the rotation speed at 100% fwd*/
+my_motor.dualSetPercent(100, false); /*Set the rotation speed at 100% reverse*/
 
 ```
-
-## TODO
-
-Add a parameter to the constructor that specify if the motor is uni or bidirectional to initialize the motor speed at 0% for safety.

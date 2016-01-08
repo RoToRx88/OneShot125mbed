@@ -35,3 +35,13 @@ float OneShot125::dualOneShotCalculatePercent(float const _percent, bool _direct
     else
         return (((_percent - 0) * (this->min - this->middle)) / (100 - 0)) + this->middle;
 }
+
+
+float OneShot125::getPercent()
+{
+    return this->percent;
+}
+
+OneShot125::~OneShot125()
+{
+}
