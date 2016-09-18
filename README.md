@@ -44,3 +44,5 @@ my_motor.dualSetPercent(100, true); /*Set the rotation speed at 100% fwd*/
 my_motor.dualSetPercent(100, false); /*Set the rotation speed at 100% reverse*/
 
 ```
+
+### Does not actually manage the variable Period of OneShot concept. Maybe implemented later.
